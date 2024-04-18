@@ -1,0 +1,15 @@
+alphabet=["A","B","C","D","E"]
+first_letter=alphabet[0]
+last_letter=[-1]
+first_three=alphabet[:3]
+print(first_three)
+last_three=alphabet[-3:]
+print(last_three)
+alphabet.append("F")
+alphabet.append("G")
+alphabet.append("H")
+print(alphabet)
+last_three=alphabet[-3:]
+print(last_three)
+alphabet.remove("H")
+print(alphabet)
