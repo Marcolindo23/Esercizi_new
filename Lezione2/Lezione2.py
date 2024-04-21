@@ -83,13 +83,156 @@ print(f"{persona_rimossa} {message6}")
 print(f"{persona_rimossa1} {message6}")
 print(f"{persona_rimossa2} {message6}")
 print(f"{persona_rimossa3} {message6}")
+#3-8. Seeing the World: Think of at least five places in the world you’d like to visit.
+#• Store the locations in a list. Make sure the list is not in alphabetical order.
+#• Print your list in its original order. Don’t worry about printing the list neatly; just print it as a raw Python list.
+#• Use sorted() to print your list in alphabetical order without modifying the actual list.
+#• Show that your list is still in its original order by printing it.
+#• Use sorted() to print your list in reverse-alphabetical order without changing the order of the original list.
+#• Show that your list is still in its original order by printing it again.
+#• Use reverse()  to change the order of your list. Print the list to show that its order has changed.
+#• Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+#• Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+#• Use sort() to change your list so it’s stored in reverse-alphabetical order.
+#Print the list to show that its order has changed.
+Posti_da_Visitare=["Stati Uniti D'America", "Lapponia", "Petra", "Machu Picchu", "India"]
+print(f"La lista originale é: {Posti_da_Visitare}")
+print(f"La lista in ordine alfabetico è: {sorted(Posti_da_Visitare)}")
+print(f"Lista in ordine alfabetico inverso: {sorted(Posti_da_Visitare, reverse=True)}")
+print(f"La lista originale é: {Posti_da_Visitare}")
+Posti_da_Visitare.reverse()
+print(f"Lista dopo l'inversione dell'ordine: {Posti_da_Visitare}")
+Posti_da_Visitare.reverse()
+print(f"Lista ripristinata all'ordine originale: {Posti_da_Visitare}")
+Posti_da_Visitare.sort()
+print(f"Lista ordinata in ordine alfabetico: {Posti_da_Visitare}")
+Posti_da_Visitare.sort(reverse=True)
+print(f"Lista ordinata in ordine alfabetico inverso: {Posti_da_Visitare}")
+#3-9. Dinner Guests: Working with one of the programs from Exercises 3
+#use len() to print a message indicating the number of people you’re inviting to dinner.
+numero_invitati=len(Invitati)
+print(F"Gli invitati a cena sono: {numero_invitati}")
+#3-10. Every Function: Think of things you could store in a list. 
+#For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. 
+#Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
+elementi = ["Montagne", "Fiumi", "Paesi", "Città", "Lingue"]
+print(f"Lista originale: {elementi}")
+elementi.append("Oceani")
+print(f"Lista dopo l'aggiunta di 'Oceani': {elementi}")
+elementi.insert(2, "Laghi")
+print(f"Lista dopo l'inserimento di 'Laghi' alla posizione 2: {elementi}")
+elementi.remove("Paesi")
+print(f"Lista dopo la rimozione di 'Paesi': {elementi}")
+elemento_rimosso = elementi.pop()
+print(f"Ultimo elemento rimosso dalla lista: {elementi}")
+print(f"Lista dopo la rimozione dell'ultimo elemento: {elementi}")
+elementi.sort()
+print(f"Lista ordinata in ordine alfabetico: {elementi}")
+elementi.sort(reverse=True)
+print(f"Lista ordinata in ordine alfabetico inverso: {elementi}")
+elementi.reverse()
+print(f"Lista con l'ordine degli elementi invertito: {elementi} ")
+lunghezza_lista = len(elementi)
+print(f"La lunghezza della lista è: {elementi}")
+#6-1. Person: Use a dictionary to store information about a person you know. 
+#Store their first name, last name, age, and the city in which they live. 
+#You should have keys such as first_name, last_name, age, and city. Print each piece of information stored in your dictionary.
+persona = {"first_name": "Marco", "last_name": "Rossi", "age": 30, "city": "Roma"}
+print(f"Nome: {persona['first_name']}")
+print(f"Cognome: {persona['last_name']}")
+print(f"Età: {persona['age']}")
+print(f"Città: {persona['city']}")
+#6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers.Think of five names,and use them as keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. 
+#Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
+numeri_preferiti = {"Marco": 7, "Anna": 12, "Luca": 5, "Giulia": 9, "Matteo": 3}
+for persona, numero in numeri_preferiti.items():
+    print(f"{persona} ha come numero preferito il {numero}.")
+#6-3. Glossary: A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
+#• Think of five programming words you’ve learned about in the previous chapters. 
+#Use these words as the keys in your glossary, and store their meanings as values.
+#• Print each word and its meaning as neatly formatted output. 
+#You might print the word followed by a colon and then its meaning, or print the word on one line 
+#and then print its meaning indented on a second line. 
+#Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+glossario = {
+    "Variabile": "Un nome che fa riferimento a un valore memorizzato in memoria.",
+    "Lista": "Una struttura dati ordinata che può contenere elementi di diversi tipi.",
+    "Ciclo": "Un costrutto che permette di ripetere un blocco di istruzioni più volte.",
+    "Funzione": "Un blocco di codice riutilizzabile che esegue una specifica operazione.",
+    "Condizione": "Un'istruzione che permette di eseguire blocchi di codice solo se una determinata condizione è vera."
+}
+for parola, significato in glossario.items():
+    print(f"{parola}:\n{significato}\n")
+#6-7. People: Start with the program you wrote for Exercise 6-1.
+#Make two new dictionaries representing different people, and store all three dictionaries in a list called people. 
+#Loop through your list of people. 
+#As you loop through the list, print everything you know about each person.
+persona1 = { "nome": "Marco", "cognome": "Rossi", "età": 30, "città": "Roma"}
+persona2 = {"nome": "Anna", "cognome": "Bianchi", "età": 25, "città": "Milano"}
+persona3 = {"nome": "Luca", "cognome": "Verdi", "età": 35, "città": "Napoli"}
+people = [persona1, persona2, persona3]
+for persona in people:
+    print(f"Nome: {persona['nome']}")
+    print(f"Cognome: {persona['cognome']}")
+    print(f"Età: {persona['età']}")
+    print(f"Città: {persona['città']}")
+    print()
+#6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. 
+#In each dictionary, include the kind of animal and the owner’s name. 
+#Store these dictionaries in a list called pets. Next, loop through your list and as you do, print everything you know about each pet. 
+pet1 = {"animale": "Cane", "proprietario": "Mario"}
+pet2 = {"animale": "Gatto", "proprietario": "Anna"}
+pet3 = {"animale": "Pappagallo", "proprietario": "Luca"}
+pets = [pet1, pet2, pet3]
+for pet in pets:
+    print(f"Tipo di animale: {pet['animale']}")
+    print(f"Proprietario: {pet['proprietario']}")
+    print()
+#6-9. Favorite Places: Make a dictionary called favorite_places. 
+#Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. 
+#To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. 
+#Loop through the dictionary, and print each person’s name and their favorite places.
+Posti_Preferiti = {
+    "Marco": ["Roma", "Firenze", "New York"],
+    "Anna": ["Parigi", "Barcellona"],
+    "Luca": ["Tokyo"]
+}
 
-
-
-
-
-
-
+# Itera attraverso il dizionario dei luoghi preferiti e stampa i nomi delle persone e i loro luoghi preferiti
+for persona, luoghi in Posti_Preferiti.items():
+    print(f"{persona} preferisce i seguenti luoghi:")
+    for luogo in luoghi:
+        print(f"- {luogo}")
+    print()
+#6-10. Favorite Numbers: Modify your program from Exercise 6-2 so each person can have more than one favorite number. 
+#Then print each person’s name along with their favorite numbers.
+numeri_preferiti = {
+    "Marco": [7, 11, 22],
+    "Anna": [12, 5],
+    "Luca": [9, 3, 8],
+    "Giulia": [4]
+}
+for persona, numeri in numeri_preferiti.items():
+    print(f"{persona} ha come numeri preferiti:")
+    for numero in numeri:
+        print(numero)
+    print()  
+#6-11. Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary.
+#Create a dictionary of information about each city and include the country that the city is in, its approximate population, 
+#and one fact about that city. The keys for each city’s dictionary should be something like country, population, and fact. 
+#Print the name of each city and all of the information you have stored about it.
+cities = {
+    "Roma": {"country": "Italia", "population": 2873000, "fact": "È la capitale d'Italia e la città più grande del paese."},
+    "Parigi": {"country": "Francia", "population": 2148000, "fact": "È famosa per la sua torre Eiffel e la sua arte."},
+    "Tokyo": {"country": "Giappone", "population": 13960000, "fact": "È una delle città più grandi e affollate del mondo."}
+}
+for city, info in cities.items():
+    print(f"Informazioni su {city}:")
+    for key, value in info.items():
+        if key == "population":
+            value = "{:,}".format(value).replace(",",".")
+        print(f"{key.title()}: {value}")
+    print()
 
 
 
